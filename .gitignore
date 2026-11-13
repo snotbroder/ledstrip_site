@@ -1,0 +1,66 @@
+# Generated with Claude
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+auth.json
+
+# Composer
+composer.phar
+
+# PHP tooling caches
+.phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+.php_cs.cache
+phpstan.neon.local
+/coverage/
+
+# Uploads & runtime files
+/public/uploads/
+/storage/sessions/
+/storage/uploads/
+*.sqlite
+*.sqlite3
+
+# Claude
+CLAUDE.md
+claude.md
+.claude/settings.local.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.fleet/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Logs & cache
+*.log
+npm-debug.log*
+/storage/logs/
+/storage/cache/
+.cache/
+
+# Tailwind CLI binary
+tailwindcss
+tailwindcss-*
+
+# Build
+/public/build/
+/dist/
