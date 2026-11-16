@@ -7,6 +7,10 @@ define('ROOT', __DIR__);
 session_start();
 // Views
 get('/', 'views/page-index.php');
+get('/styletile', 'views/page-styletile.php');
+
+// Dashboard Views
+get('/dashboard', 'views/dashboard/page-index-dashboard.php');
 
 // Test routes
 get('/items/$category', 'pages/page-items.php');

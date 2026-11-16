@@ -1,4 +1,5 @@
 /*! tailwindcss v4.3.5 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -7,8 +8,8 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-600: oklch(57.7% 0.245 27.325);
+    --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -162,10 +163,187 @@
   }
 }
 @layer utilities {
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
+  .flex {
+    display: flex;
+  }
   .hidden {
     display: none;
   }
+  .transform {
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-\(--light-blackbean\) {
+    border-color: var(--light-blackbean);
+  }
+  .bg-\(--darkened-blackbean\) {
+    background-color: var(--darkened-blackbean);
+  }
+  .bg-\(--darkened-eggshell\) {
+    background-color: var(--darkened-eggshell);
+  }
+  .bg-\(--darkened-sea\) {
+    background-color: var(--darkened-sea);
+  }
+  .bg-\(--light-blackbean\) {
+    background-color: var(--light-blackbean);
+  }
+  .bg-\(--light-eggshell\) {
+    background-color: var(--light-eggshell);
+  }
+  .bg-\(--light-sea\) {
+    background-color: var(--light-sea);
+  }
+  .bg-\(--pure-blackbean\) {
+    background-color: var(--pure-blackbean);
+  }
+  .bg-\(--pure-eggshell\) {
+    background-color: var(--pure-eggshell);
+  }
+  .bg-\(--pure-sea\) {
+    background-color: var(--pure-sea);
+  }
+  .bg-\(--system-failure\) {
+    background-color: var(--system-failure);
+  }
+  .bg-\(--system-inform\) {
+    background-color: var(--system-inform);
+  }
+  .bg-\(--system-success\) {
+    background-color: var(--system-success);
+  }
+  .bg-\(--system-warning\) {
+    background-color: var(--system-warning);
+  }
+  .text-\(--darkened-blackbean\)\! {
+    color: var(--darkened-blackbean) !important;
+  }
   .text-red-600 {
     color: var(--color-red-600);
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Sora:wght@100..800&display=swap");
+.colorbox {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+}
+:root {
+  --darkened-sea: #00717e;
+  --pure-sea: #00909e;
+  --light-sea: #00a9ac;
+  --darkened-blackbean: #12201c;
+  --pure-blackbean: #2e3e39;
+  --light-blackbean: #9fb1ab;
+  --darkened-eggshell: #e5e6ea;
+  --pure-eggshell: #f9fafb;
+  --light-eggshell: #ffffff;
+  --system-failure: #f36751;
+  --system-inform: #5c9cfc;
+  --system-success: #55da71;
+  --system-warning: #fcc45c;
+  --font-h1: clamp(1.75rem, 1.38565rem + 1.494768vw, 3rem);
+  --font-h2: clamp(1.5rem, 1.20852rem + 1.195815vw, 2.5rem);
+  --font-h3: clamp(1.375rem, 1.192825rem + 0.747384vw, 2rem);
+  --font-h4: clamp(1.25rem, 1.10426rem + 0.597907vw, 1.75rem);
+  --font-h5: clamp(1.125rem, 1.015695rem + 0.44843vw, 1.5rem);
+  --font-h6: clamp(1rem, 0.92713rem + 0.298954vw, 1.25rem);
+  --font-p: clamp(0.875rem, 0.856783rem + 0.074738vw, 0.9375rem);
+  --font-p-small: clamp(0.75rem, 0.731783rem + 0.074738vw, 0.8125rem);
+  --font-p-xsmall: clamp(0.6875rem, 0.669283rem + 0.074738vw, 0.75rem);
+}
+h1, .h1 {
+  font-size: var(--font-h1);
+}
+h2, .h2 {
+  font-size: var(--font-h2);
+}
+h3, .h3 {
+  font-size: var(--font-h3);
+}
+h4, .h4 {
+  font-size: var(--font-h4);
+}
+h5, .h5 {
+  font-size: var(--font-h5);
+}
+h6, .h6 {
+  font-size: var(--font-h6);
+}
+:where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+  line-height: 1.2;
+}
+p {
+  font-family: "Sora", sans-serif;
+  font-size: var(--font-p);
+  line-height: 1.5;
+  color: var(--darkened-blackbean);
+}
+p.small {
+  font-family: "Sora", sans-serif;
+  font-size: var(--font-p-small);
+  color: var(--darkened-blackbean);
+}
+p.xsmall {
+  font-family: "Sora", sans-serif;
+  font-size: var(--font-p-xsmall);
+  color: var(--darkened-blackbean);
+}
+.font-bungee {
+  font-family: "Bungee", sans-serif;
+}
+.font-sora {
+  font-family: "Sora", sans-serif;
+}
+main {
+  max-width: 80rem;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+    }
   }
 }

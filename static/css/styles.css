@@ -1,1 +1,99 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Sora:wght@100..800&display=swap");
+
+/* Styletile */
+.colorbox {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+}
+
+:root {
+  --darkened-sea: #00717e;
+  --pure-sea: #00909e;
+  --light-sea: #00a9ac;
+
+  --darkened-blackbean: #12201c;
+  --pure-blackbean: #2e3e39;
+  --light-blackbean: #9fb1ab;
+
+  --darkened-eggshell: #e5e6ea;
+  --pure-eggshell: #f9fafb;
+  --light-eggshell: #ffffff;
+
+  --system-failure: #f36751;
+  --system-inform: #5c9cfc;
+  --system-success: #55da71;
+  --system-warning: #fcc45c;
+
+  --font-h1: clamp(1.75rem, 1.38565rem + 1.494768vw, 3rem); /* 28 → 48px */
+  --font-h2: clamp(1.5rem, 1.20852rem + 1.195815vw, 2.5rem); /* 24 → 40px */
+  --font-h3: clamp(1.375rem, 1.192825rem + 0.747384vw, 2rem); /* 22 → 32px */
+  --font-h4: clamp(1.25rem, 1.10426rem + 0.597907vw, 1.75rem); /* 20 → 28px */
+  --font-h5: clamp(1.125rem, 1.015695rem + 0.44843vw, 1.5rem); /* 18 → 24px */
+  --font-h6: clamp(1rem, 0.92713rem + 0.298954vw, 1.25rem); /* 16 → 20px */
+
+  --font-p: clamp(0.875rem, 0.856783rem + 0.074738vw, 0.9375rem); /* 14 → 15px */
+  --font-p-small: clamp(0.75rem, 0.731783rem + 0.074738vw, 0.8125rem); /* 12 → 13px */
+  --font-p-xsmall: clamp(0.6875rem, 0.669283rem + 0.074738vw, 0.75rem); /* 11 → 12px */
+}
+/* headings and reusable size classes */
+h1,
+.h1 {
+  font-size: var(--font-h1);
+}
+h2,
+.h2 {
+  font-size: var(--font-h2);
+}
+h3,
+.h3 {
+  font-size: var(--font-h3);
+}
+h4,
+.h4 {
+  font-size: var(--font-h4);
+}
+h5,
+.h5 {
+  font-size: var(--font-h5);
+}
+h6,
+.h6 {
+  font-size: var(--font-h6);
+}
+
+:where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+  line-height: 1.2;
+}
+
+/* paragraphs */
+p {
+  font-family: "Sora", sans-serif;
+  font-size: var(--font-p);
+  line-height: 1.5;
+  color: var(--darkened-blackbean);
+}
+
+p.small {
+  font-family: "Sora", sans-serif;
+  font-size: var(--font-p-small);
+  color: var(--darkened-blackbean);
+}
+
+p.xsmall {
+  font-family: "Sora", sans-serif;
+  font-size: var(--font-p-xsmall);
+  color: var(--darkened-blackbean);
+}
+
+.font-bungee {
+  font-family: "Bungee", sans-serif;
+}
+.font-sora {
+  font-family: "Sora", sans-serif;
+}
+
+main {
+  max-width: 80rem;
+}
