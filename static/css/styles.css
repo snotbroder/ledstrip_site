@@ -39,7 +39,7 @@
 }
 /* headings and reusable size classes */
 h1,
-.h1 {
+.font-h1 {
   font-size: var(--font-h1);
 }
 h2,
@@ -85,6 +85,10 @@ p.xsmall {
   font-family: "Sora", sans-serif;
   font-size: var(--font-p-xsmall);
   color: var(--darkened-blackbean);
+}
+
+.xsmall {
+  font-size: var(--font-p-xsmall);
 }
 
 .font-bungee {
