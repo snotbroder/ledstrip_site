@@ -17,12 +17,13 @@
 
 </head>
 
-<body>
-    <header class="py-2">
-        <div class="flex flex-col gap-4 max-w-7xl mx-auto px-4">
+<body class="dashboard">
+    <header class="py-2 bg-(--light-eggshell)">
+        <div class="flex flex-col gap-1 max-w-7xl mx-auto px-4">
             <section class="flex justify-between items-center">
-                <a href="/">
-                    <img class="w-90" src="/static/assets/ledstrip-logo.svg" alt="Ledstrip Logo">
+                <a href="/dashboard" class="flex gap-6 font-bungee text-5xl items-center text-(--pure-blackbean)">
+                    <img class="w-20" src="/static/assets/favicon.png" alt="Ledstrip Logo">
+                    Dashboard
                 </a>
 
                 <div>
@@ -30,20 +31,19 @@
                 </div>
             </section>
             <section class="py-2">
-                <ul class="flex gap-9 items-center">
-                    <li class="font-sora text-darkened-blackbean font-medium"><a href="/">Led-strips</a></li>
+                <ul class="flex gap-9 items-center bg-(--pure-eggshell) px-6 py-1 rounded-md">
+                    <li class="menu-item <?= ($active ?? '') === 'index' ? 'active-link' : '' ?>"><a href="/">Ordrer</a></li>
                     <li class="text-(--light-blackbean)">|</li>
-                    <li class="font-sora text-darkened-blackbean font-medium"><a href="/">Controllers</a></li>
+                    <li class="menu-item <?= ($active ?? '') === 'katalog' ? 'active-link' : '' ?>"><a href="/">Katalog</a></li>
                     <li class="text-(--light-blackbean)">|</li>
-                    <li class="font-sora text-darkened-blackbean font-medium"><a href="/">Beslag og montering</a></li>
+                    <li class="menu-item <?= ($active ?? '') === 'lagerstatus' ? 'active-link' : '' ?>"><a href="/">Lagerstatus</a></li>
                     <li class="text-(--light-blackbean)">|</li>
-                    <li class="font-sora text-darkened-blackbean font-medium"><a href="/">Kontakt os</a></li>
+                    <li class="menu-item <?= ($active ?? '') === 'brugere' ? 'active-link' : '' ?>"><a href="/">Brugere</a></li>
 
 
                 </ul>
-                <p>Dashboard header</p>
             </section>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 my-10">
+    <main class="max-w-7xl mx-auto px-4 my-10 ">

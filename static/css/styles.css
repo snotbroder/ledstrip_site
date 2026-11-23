@@ -101,3 +101,17 @@ p.xsmall {
 main {
   max-width: 80rem;
 }
+.menu-item {
+  color: var(--darkened-blackbean);
+  font-family: "Sora", sans-serif;
+  font-weight: 500;
+}
+.active-link {
+  color: var(--darkened-sea);
+  &:hover {
+    color: var(--darkened-blackbean);
+  }
+}
+.dashboard {
+  background-color: var(--pure-eggshell);
+}
