@@ -8,10 +8,7 @@
     <link href="/static/css/output.css" rel="stylesheet">
     <link href="/static/css/styles.css" rel="stylesheet">
     <link rel="shortcut icon" href="/static/assets/favicon.png" type="image/x-icon" />
-
-
-    <!-- <script src="/static/js/mixhtml.js" defer></script> -->
-
+    <script src="/static/js/mixhtml.js" defer></script>
 
     <?php require_once ROOT . "/config/_.php"; ?>
 
@@ -32,9 +29,9 @@
             </section>
             <section class="py-2">
                 <ul class="flex gap-9 items-center bg-(--pure-eggshell) px-6 py-1 rounded-md">
-                    <li class="menu-item <?= ($active ?? '') === 'index' ? 'active-link' : '' ?>"><a href="/">Ordrer</a></li>
+                    <li class="menu-item <?= ($active ?? '') === 'index' ? 'active-link' : '' ?>"><a href="/dashboard">Ordrer</a></li>
                     <li class="text-(--light-blackbean)">|</li>
-                    <li class="menu-item <?= ($active ?? '') === 'katalog' ? 'active-link' : '' ?>"><a href="/">Katalog</a></li>
+                    <li class="menu-item <?= ($active ?? '') === 'katalog' ? 'active-link' : '' ?>"><a href="/dashboard/katalog">Katalog</a></li>
                     <li class="text-(--light-blackbean)">|</li>
                     <li class="menu-item <?= ($active ?? '') === 'lagerstatus' ? 'active-link' : '' ?>"><a href="/">Lagerstatus</a></li>
                     <li class="text-(--light-blackbean)">|</li>
@@ -47,3 +44,4 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-4 my-10 ">
+        <div id="toast"></div>
